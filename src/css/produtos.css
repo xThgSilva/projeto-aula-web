@@ -1,0 +1,38 @@
+.main-produtos {
+  padding: 20px;
+}
+
+.section-produtos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.section-produtos div {
+  text-align: center;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  transition: .30s; 
+}
+
+.section-produtos div:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  transform: scale(1.025);
+}
+
+.section-produtos img {
+  width: 400px;
+}
+
+.section-produtos div i {
+  font-size: 1.25rem;
+}
+
+.section-produtos div span {
+  color: green;
+  font-weight: bold;
+}
