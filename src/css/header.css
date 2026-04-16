@@ -1,0 +1,59 @@
+header {
+  background-color: red;
+  position: relative;
+  font-weight: 500;
+}
+
+/* header {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  font-size: 1.125rem;
+} */
+
+/* nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  color: white;
+} */
+
+.logo {
+  width: 200px;
+  margin: 0px 40px;
+  /* animation: rodar 1s linear infinite; */
+}
+
+.carro-animation {
+  animation: andar 15s infinite;
+}
+
+/* Style da navegação do header */
+nav {
+  color: white;
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  font-size: 1.3rem;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+  margin: 0px 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transform: scale(1.1);
+}

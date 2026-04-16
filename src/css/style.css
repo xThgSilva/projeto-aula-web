@@ -1,75 +1,7 @@
 /* style do Header */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Noto Serif", serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-header {
-  background-color: red;
-  position: relative;
-  font-weight: 500;
-}
-
-/* header {
-  background-color: red;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 50px;
-  font-size: 1.125rem;
-} */
-
-/* nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  color: white;
-} */
-
-.logo {
-  width: 200px;
-  margin: 0px 40px;
-  /* animation: rodar 1s linear infinite; */
-}
-
-.carro-animation {
-  animation: andar 15s infinite;
-}
-
-/* Style da navegação do header */
-nav {
-  color: white;
-  position: absolute;
-  top: 40%;
-  right: 2%;
-  font-size: 1.3rem;
-}
-
-nav li {
-  list-style: none;
-  display: inline;
-  margin: 0px 30px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-nav li a {
-  text-decoration: none;
-  color: white;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  transform: scale(1.1);
-}
+@import "header.css";
+@import "footer.css";
+@import "global.css";
 
 /* Style do banner */
 .banner {
@@ -153,52 +85,6 @@ nav ul li a:hover {
 
 .video-section p {
   font-size: 1.125rem;
-}
-
-/* Style do footer */
-footer {
-  background-color: red;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 10px;
-  color: white;
-}
-
-footer img {
-  width: 200px;
-}
-
-.info-contato {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-contato div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  font-size: 1.5rem;
-}
-
-.info-contato div p {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.info-contato div a {
-  text-decoration: none;
-  color: white;
-}
-
-.info-contato div a img {
-  width: 50px;
 }
 
 @keyframes rodar {

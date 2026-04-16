@@ -1,3 +1,7 @@
+@import "header.css";
+@import "footer.css";
+@import "global.css";
+
 .main-produtos {
   padding: 20px;
 }
@@ -19,7 +23,7 @@
 }
 
 .section-produtos div:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
   transform: translateY(-2px);
   transform: scale(1.025);
 }
@@ -35,4 +39,49 @@
 .section-produtos div span {
   color: green;
   font-weight: bold;
+}
+
+footer {
+  background-color: red;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+  color: white;
+}
+
+footer img {
+  width: 200px;
+}
+
+.info-contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-contato div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 1.5rem;
+}
+
+.info-contato div p {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-contato div a {
+  text-decoration: none;
+  color: white;
+}
+
+.info-contato div a img {
+  width: 50px;
 }
