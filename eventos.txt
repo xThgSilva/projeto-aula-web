@@ -1,0 +1,8 @@
+onClick -> Ocorre quando o usuário clica em um elemento
+onChange -> Ocorre quando há mudanças no valor de elemento
+onBlur -> Ocorre quando um elemento perde o foco
+onFocus -> Ocorre quando um elemento recebe o foco
+onKeyPress -> Ocorre quando uma tecla é pressionada
+onLoad -> Ocorre quando o elemento é carregado
+onMouseOver -> Ocorre quando o mouse esta em cima do elemento
+onMouseOut -> Ocorre quando o mouse sai de cima do elemento

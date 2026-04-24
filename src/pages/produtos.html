@@ -8,7 +8,13 @@
   </head>
   <body>
     <header>
-      <img src="../img/logo.png" alt="Logo da ferrari" class="logo" />
+      <a href="../../index.html"
+        ><img
+          src="../img/logo.png"
+          alt="Logo da ferrari"
+          class="logo"
+          title="Voltar a Home"
+      /></a>
       <!-- <img class="carro-animation" src="src/img/carro-animation.png" /> -->
       <nav>
         <ul>
@@ -18,40 +24,44 @@
       </nav>
     </header>
     <main class="main-produtos">
-      <h1>Produtos</h1>
-      <p>Produtos da Ferrari abaixo:</p>
+      <h1>Carros</h1>
+      <p>Carros da Ferrari abaixo:</p>
       <section class="section-produtos">
-        <div>
+        <div
+          onclick="
+            mostrarDetalhes(
+              'Ferrari F12 Berlinetta',
+              '../img/produtos/img_produto.jpg',
+              '10,000,000',
+            )
+          "
+        >
           <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
           <h3>Ferrari F12 Berlinetta</h3>
           <i>Preço: <span>R$10,000,000</span></i>
         </div>
-        <div>
+        <div
+          onclick="
+            mostrarDetalhes(
+              'Ferrari F12 Berlinetta',
+              '../img/produtos/img_produto.jpg',
+              '10,000,000',
+            )
+          "
+        >
           <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
           <h3>Ferrari F12 Berlinetta</h3>
           <i>Preço: <span>R$10,000,000</span></i>
         </div>
-        <div>
-          <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
-          <h3>Ferrari F12 Berlinetta</h3>
-          <i>Preço: <span>R$10,000,000</span></i>
-        </div>
-        <div>
-          <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
-          <h3>Ferrari F12 Berlinetta</h3>
-          <i>Preço: <span>R$10,000,000</span></i>
-        </div>
-        <div>
-          <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
-          <h3>Ferrari F12 Berlinetta</h3>
-          <i>Preço: <span>R$10,000,000</span></i>
-        </div>
-        <div>
-          <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
-          <h3>Ferrari F12 Berlinetta</h3>
-          <i>Preço: <span>R$10,000,000</span></i>
-        </div>
-        <div>
+        <div
+          onclick="
+            mostrarDetalhes(
+              'Ferrari F12 Berlinetta',
+              '../img/produtos/img_produto.jpg',
+              '10,000,000',
+            )
+          "
+        >
           <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
           <h3>Ferrari F12 Berlinetta</h3>
           <i>Preço: <span>R$10,000,000</span></i>
@@ -79,8 +89,16 @@
   </body>
   <script>
     // alert("Conheça nossos produtos");
-    const data = new Date()
-    const infoData = document.getElementById("data-hora")
-    infoData.textContent += `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} - ${data.getHours()}:${data.getMinutes()}`
+    const data = new Date();
+    const infoData = document.getElementById("data-hora");
+    infoData.textContent += `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} - ${data.getHours()}:${data.getMinutes()}`;
+
+    function mostrarDetalhes(nomeProduto, imgUrl, preco) {
+      const url = `pop_produtos.html?nomeCarro=${encodeURIComponent(nomeProduto)}
+        &imgCarro=${encodeURIComponent(imgUrl)}
+        &precoCarro=${encodeURIComponent(preco)}`;
+
+      window.open(url, "_blank", "width=800, height=700");
+    }
   </script>
 </html>

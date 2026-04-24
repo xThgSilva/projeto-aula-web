@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/pop.css">
+  </head>
+  <body>
+    <div>
+      <img id="imgCarro" src="" alt="Imagem do produto" />
+      <h3 id="nomeCarro"></h3>
+      <i>Preço: R$<span id="precoCarro"></span></i> <br />
+      <button id="btnVoltar" onclick="fecharDetalhes()">Fechar Detalhes</button>
+    </div>
+  </body>
+  <script>  
+    // Pra voltar
+    const btnVoltar = document.getElementById("btnVoltar").addEventListener("click", () => {
+      window.close()
+    })
+
+    function getProperties(carroDetails) {
+      const urlParametro = new URLSearchParams(window.location.search);
+
+      return urlParametro.get(carroDetails)
+    }
+
+    document.getElementById("imgCarro").src = `${getProperties("imgCarro")}`
+    document.getElementById("nomeCarro").innerText = `${getProperties("nomeCarro")}`
+    document.getElementById("precoCarro").innerText = `${getProperties("precoCarro")}`
+
+  </script>
+</html>

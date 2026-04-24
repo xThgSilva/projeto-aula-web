@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+  text-align: center;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  transition: .30s; 
+}
+
+img {
+  width: 500px;
+}
+
+div i {
+  font-size: 1.25rem;
+}
+
+div span {
+  color: green;
+  font-weight: bold;
+}
+
+div button {
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    margin: 30px;
+    transition: .5s;
+}
+
+div button:hover {
+    transform: translateY(-5px);
+}
