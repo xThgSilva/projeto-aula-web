@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produtos</title>
+    <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/produtos.css" />
   </head>
   <body>
@@ -31,40 +32,53 @@
           onclick="
             mostrarDetalhes(
               'Ferrari F12 Berlinetta',
-              '../img/produtos/img_produto.jpg',
-              '10,000,000',
+              slider = [
+                  '../img/produtos/ferrari_berlinetta.jpg',
+                  '../img/produtos/ferrari_enzo.jpg',
+                  '../img/produtos/ferrari_laFerrari.jpg',
+                      ],
+              '10.000.000',
+              'A Ferrari Berlinetta representa a tradição da Ferrari na criação de carros esportivos de alto desempenho com design sofisticado e engenharia avançada. O termo “Berlinetta” é utilizado pela marca italiana para identificar modelos cupê de dois lugares com foco em esportividade, aerodinâmica e experiência de condução. Esses veículos combinam motores potentes, tecnologia inspirada na Fórmula 1 e acabamento de luxo, tornando-se símbolos de exclusividade e desempenho automotivo.'
             )
           "
         >
-          <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
+          <img
+            src="../img/produtos/ferrari_berlinetta.jpg"
+            alt="Imagem do produto"
+          />
           <h3>Ferrari F12 Berlinetta</h3>
-          <i>Preço: <span>R$10,000,000</span></i>
+          <i>Preço: <span>R$10.000.000</span></i>
         </div>
         <div
           onclick="
             mostrarDetalhes(
-              'Ferrari F12 Berlinetta',
-              '../img/produtos/img_produto.jpg',
-              '10,000,000',
+              'Ferrari Enzo',
+              '../img/produtos/ferrari_enzo.jpg',
+              '4.200.000',
+              'A Ferrari Enzo foi desenvolvida como uma homenagem ao fundador da marca, Enzo Ferrari, e marcou uma revolução tecnológica na indústria automobilística. Produzida em edição limitada, a Enzo utilizava soluções derivadas da Fórmula 1, como carroceria em fibra de carbono, câmbio automatizado e avançados sistemas aerodinâmicos. Equipada com um motor V12 extremamente potente, o modelo tornou-se um dos supercarros mais icônicos do início dos anos 2000, destacando-se pela velocidade, exclusividade e inovação.'
             )
           "
         >
-          <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
-          <h3>Ferrari F12 Berlinetta</h3>
-          <i>Preço: <span>R$10,000,000</span></i>
+          <img src="../img/produtos/ferrari_enzo.jpg" alt="Imagem do produto" />
+          <h3>Ferrari Enzo</h3>
+          <i>Preço: <span>R$4.200.000</span></i>
         </div>
         <div
           onclick="
             mostrarDetalhes(
-              'Ferrari F12 Berlinetta',
-              '../img/produtos/img_produto.jpg',
-              '10,000,000',
+              'LaFerrari',
+              '../img/produtos/ferrari_laFerrari.jpg',
+              '37.000.000',
+              'A LaFerrari é considerada uma das criações mais avançadas da Ferrari. O modelo combina um motor V12 aspirado com um sistema híbrido elétrico HY-KERS, proporcionando desempenho excepcional aliado à eficiência energética. Com design futurista, materiais ultraleves e tecnologia de ponta, a LaFerrari representa a evolução dos hipercarros modernos e demonstra o compromisso da Ferrari em unir potência, inovação e sustentabilidade em um único veículo.'
             )
           "
         >
-          <img src="../img/produtos/img_produto.jpg" alt="Imagem do produto" />
-          <h3>Ferrari F12 Berlinetta</h3>
-          <i>Preço: <span>R$10,000,000</span></i>
+          <img
+            src="../img/produtos/ferrari_laFerrari.jpg"
+            alt="Imagem do produto"
+          />
+          <h3>Ferrari LaFerrari</h3>
+          <i>Preço: <span>R$37.000.000</span></i>
         </div>
       </section>
     </main>
@@ -93,12 +107,13 @@
     const infoData = document.getElementById("data-hora");
     infoData.textContent += `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} - ${data.getHours()}:${data.getMinutes()}`;
 
-    function mostrarDetalhes(nomeProduto, imgUrl, preco) {
+    function mostrarDetalhes(nomeProduto, imgUrl, preco, descricao) {
       const url = `pop_produtos.html?nomeCarro=${encodeURIComponent(nomeProduto)}
         &imgCarro=${encodeURIComponent(imgUrl)}
-        &precoCarro=${encodeURIComponent(preco)}`;
+        &precoCarro=${encodeURIComponent(preco)}
+        &descricao=${encodeURIComponent(descricao)}`;
 
-      window.open(url, "_blank", "width=800, height=700");
+      window.open(url, "_self");
     }
   </script>
 </html>

@@ -4,31 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/pop.css">
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/pop.css" />
   </head>
   <body>
-    <div>
-      <img id="imgCarro" src="" alt="Imagem do produto" />
-      <h3 id="nomeCarro"></h3>
-      <i>Preço: R$<span id="precoCarro"></span></i> <br />
-      <button id="btnVoltar" onclick="fecharDetalhes()">Fechar Detalhes</button>
-    </div>
+    <main class="card-carro">
+      <!-- <img id="imgCarro" src="" alt="Imagem do produto" /> -->
+      <div class="slider">
+        <button id="prevBtn">&#10094;</button>
+        <img src="" alt="" id="slider-img" />
+        <button id="nextBtn">&#10095;</button>
+      </div>
+      <div class="info-carro">
+        <h1 id="nomeCarro"></h1>
+        <p id="descCarro"></p>
+        <p>Preço: <span id="precoCarro">R$ </span></p>
+        <br />
+      </div>
+    </main>
+    <button id="btnVoltar" onclick="fecharDetalhes()">Voltar</button>
   </body>
-  <script>  
+  <script>
     // Pra voltar
-    const btnVoltar = document.getElementById("btnVoltar").addEventListener("click", () => {
-      window.close()
-    })
+    const btnVoltar = document
+      .getElementById("btnVoltar")
+      .addEventListener("click", () => {
+        window.history.back();
+      });
 
+    // Pegandos os dados da URL
     function getProperties(carroDetails) {
       const urlParametro = new URLSearchParams(window.location.search);
-
-      return urlParametro.get(carroDetails)
+      return urlParametro.get(carroDetails);
     }
 
-    document.getElementById("imgCarro").src = `${getProperties("imgCarro")}`
-    document.getElementById("nomeCarro").innerText = `${getProperties("nomeCarro")}`
-    document.getElementById("precoCarro").innerText = `${getProperties("precoCarro")}`
+    // Preencendo campos
+    // document.getElementById("imgCarro").src = `${getProperties("imgCarro")}`;
+    document.getElementById("nomeCarro").innerText =
+      `${getProperties("nomeCarro")}`;
+    document.title = `${getProperties("nomeCarro")}`;
+    document.getElementById("precoCarro").innerText +=
+      `${getProperties("precoCarro")}`;
+    document.getElementById("descCarro").innerHTML =
+      `${getProperties("descricao")}`;
 
+    //Slider
+    const imagens = getProperties("imgCarro")
+      ? getProperties("imgCarro").split(",")
+      : [];
+
+    let i = 0;
+    const imgSlider = document.getElementById("slider-img");
+
+    function showImages() {
+      if (imagens.length > 0) {
+        imgSlider.src = imagens[i];
+      }
+    }
+    showImages();
+
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    prevBtn.addEventListener("click", () => {
+      if (i > 0) {
+        i--;
+        showImages();
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (i < imagens.length - 1) {
+        i++;
+        showImages();
+      }
+    });
+
+    showImages();
   </script>
 </html>
+<!-- genio campeao baixinho -->

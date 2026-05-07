@@ -1,40 +1,63 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
 }
 
-div {
-  text-align: center;
-  padding-bottom: 20px;
-  border-radius: 10px;
-  transition: .30s; 
+.card-carro {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  width: 50%;
 }
 
-img {
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider img {
   width: 500px;
+  transition: 5s;
 }
 
-div i {
+.info-carro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.info-carro h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.info-carro p {
   font-size: 1.25rem;
+  text-align: justify;
 }
 
-div span {
+.info-carro p span {
   color: green;
-  font-weight: bold;
 }
 
-div button {
-    padding: 10px 20px;
-    background-color: red;
-    border: none;
-    color: white;
-    border-radius: 20px;
-    margin: 30px;
-    transition: .5s;
+button {
+  padding: 10px 20px;
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-div button:hover {
-    transform: translateY(-5px);
+#btnVoltar:hover {
+  transform: translateY(-5px);
 }
