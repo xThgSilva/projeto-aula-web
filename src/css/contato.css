@@ -1,0 +1,48 @@
+.main-contato {
+  padding: 20px;
+}
+
+.form-contato fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  margin: auto auto;
+  padding: 30px;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.label-input input,
+.label-input textarea,
+.label-input select {
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.label-input textarea {
+  resize: none;
+  height: 150px;
+}
+
+button {
+  padding: 10px 30px;
+  width: 200px;
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-4px);
+}

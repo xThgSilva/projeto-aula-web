@@ -9,7 +9,6 @@
   </head>
   <body>
     <main class="card-carro">
-      <!-- <img id="imgCarro" src="" alt="Imagem do produto" /> -->
       <div class="slider">
         <button id="prevBtn">&#10094;</button>
         <img src="" alt="" id="slider-img" />
@@ -39,7 +38,7 @@
     }
 
     // Preencendo campos
-    // document.getElementById("imgCarro").src = `${getProperties("imgCarro")}`;
+    // document.getElementById("imgCarro").src = `${getProperties("imgCarro")}`; (ANTIGO)
     document.getElementById("nomeCarro").innerText =
       `${getProperties("nomeCarro")}`;
     document.title = `${getProperties("nomeCarro")}`;
@@ -56,15 +55,28 @@
     let i = 0;
     const imgSlider = document.getElementById("slider-img");
 
+    // Botões para alternar entre as imagens
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
     function showImages() {
       if (imagens.length > 0) {
         imgSlider.src = imagens[i];
+
+        // Alterando a cor e estado do botão de voltar
+        if (i == 0) {
+          prevBtn.style.background = "darkred"
+        }
+        else if (i == imagens.length - 1) {
+          nextBtn.style.background = "darkred"
+        }
+        else {
+          prevBtn.style.background = "red"
+          nextBtn.style.background = "red"
+        }
       }
     }
     showImages();
-
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
 
     prevBtn.addEventListener("click", () => {
       if (i > 0) {
@@ -79,8 +91,5 @@
         showImages();
       }
     });
-
-    showImages();
   </script>
 </html>
-<!-- genio campeao baixinho -->
