@@ -1,119 +1,147 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produtos</title>
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/produtos.css" />
-  </head>
-  <body>
-    <header>
-      <a href="../../index.html"
-        ><img
-          src="../img/global/logo.png"
-          alt="Logo da ferrari"
-          class="logo"
-          title="Voltar a Home"
-      /></a>
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="./contato.html">Contato</a></li>
-          <li id="data-hora"></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main-produtos">
-      <h1>Carros</h1>
-      <p>Carros da Ferrari abaixo:</p>
-      <section class="section-produtos">
-        <div
-          onclick="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../img/global/logo.png" />
+  <title>Produtos</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/produtos.css" />
+</head>
+
+<body>
+  <header id="header">
+    <a href="../../index.html"><img src="../img/global/logo.png" alt="Logo da ferrari" class="logo"
+        title="Voltar a Home" /></a>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+        <li id="data-hora"></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-produtos">
+    <h1>Carros</h1>
+    <p>Carros da Ferrari abaixo:</p>
+    <section class="section-produtos">
+      <div onclick="
             mostrarDetalhes(
               'Ferrari F12 Berlinetta',
-              slider = [
+              [
                   '../img/produtos/berlinetta/ferrari_berlinetta.jpg',
-                  '../img/produtos/enzo/ferrari_enzo.jpg',
-                  '../img/produtos/la-ferrari/ferrari_laFerrari.jpg',
-                      ],
-              '10.000.000',
+                  '../img/produtos/berlinetta/ferrari_berlinetta2.jpg',
+                  '../img/produtos/berlinetta/ferrari_berlinetta3.jpg',
+              ],
+              '4.000.000',
               'A Ferrari Berlinetta representa a tradição da Ferrari na criação de carros esportivos de alto desempenho com design sofisticado e engenharia avançada. O termo “Berlinetta” é utilizado pela marca italiana para identificar modelos cupê de dois lugares com foco em esportividade, aerodinâmica e experiência de condução. Esses veículos combinam motores potentes, tecnologia inspirada na Fórmula 1 e acabamento de luxo, tornando-se símbolos de exclusividade e desempenho automotivo.'
             )
-          "
-        >
-          <img
-            src="../img/produtos/berlinetta/ferrari_berlinetta.jpg"
-            alt="Imagem do produto"
-          />
-          <h3>Ferrari F12 Berlinetta</h3>
-          <i>Preço: <span>R$10.000.000</span></i>
-        </div>
-        <div
-          onclick="
+          ">
+        <img src="../img/produtos/berlinetta/ferrari_berlinetta.jpg" alt="Imagem do produto" />
+        <h3>Ferrari F12 Berlinetta</h3>
+        <i>Preço: <span>R$4.000.000</span></i>
+      </div>
+      <div onclick="
             mostrarDetalhes(
               'Ferrari Enzo',
-              '../img/produtos/enzo/ferrari_enzo.jpg',
-              '4.200.000',
+              [
+                  '../img/produtos/enzo/ferrari_enzo.jpg',
+                  '../img/produtos/enzo/ferrari_enzo2.jpg',
+                  '../img/produtos/enzo/ferrari_enzo3.jpg',
+              ],
+              '50.000.000',
               'A Ferrari Enzo foi desenvolvida como uma homenagem ao fundador da marca, Enzo Ferrari, e marcou uma revolução tecnológica na indústria automobilística. Produzida em edição limitada, a Enzo utilizava soluções derivadas da Fórmula 1, como carroceria em fibra de carbono, câmbio automatizado e avançados sistemas aerodinâmicos. Equipada com um motor V12 extremamente potente, o modelo tornou-se um dos supercarros mais icônicos do início dos anos 2000, destacando-se pela velocidade, exclusividade e inovação.'
             )
-          "
-        >
-          <img src="../img/produtos/enzo/ferrari_enzo.jpg" alt="Imagem do produto" />
-          <h3>Ferrari Enzo</h3>
-          <i>Preço: <span>R$4.200.000</span></i>
-        </div>
-        <div
-          onclick="
+          ">
+        <img src="../img/produtos/enzo/ferrari_enzo.jpg" alt="Imagem do produto" />
+        <h3>Ferrari Enzo</h3>
+        <i>Preço: <span>R$50.000.000</span></i>
+      </div>
+      <div onclick="
             mostrarDetalhes(
-              'LaFerrari',
-              '../img/produtos/la-ferrari/ferrari_laFerrari.jpg',
+              'Ferrari LaFerrari',
+              [
+                  '../img/produtos/la-ferrari/ferrari_laFerrari.jpg',
+                  '../img/produtos/la-ferrari/ferrari_laFerrari2.jpg',
+                  '../img/produtos/la-ferrari/ferrari_laFerrari3.jpg',
+              ],
               '37.000.000',
               'A LaFerrari é considerada uma das criações mais avançadas da Ferrari. O modelo combina um motor V12 aspirado com um sistema híbrido elétrico HY-KERS, proporcionando desempenho excepcional aliado à eficiência energética. Com design futurista, materiais ultraleves e tecnologia de ponta, a LaFerrari representa a evolução dos hipercarros modernos e demonstra o compromisso da Ferrari em unir potência, inovação e sustentabilidade em um único veículo.'
             )
-          "
-        >
-          <img
-            src="../img/produtos/la-ferrari/ferrari_laFerrari.jpg"
-            alt="Imagem do produto"
-          />
-          <h3>Ferrari LaFerrari</h3>
-          <i>Preço: <span>R$37.000.000</span></i>
-        </div>
-      </section>
-    </main>
-    <footer id="contato">
-      <div class="info-contato">
-        <img
-          src="../img/global/ferrari-logo-footer.png"
-          alt="Cavalo da Ferrari prateado"
-        />
-        <div>
-          <p>
-            <i class="fa-solid fa-phone"></i>
-            (11) 3087 - 0199 |
-            <a target="_blank" href="https://www.instagram.com/ferrari/">
-              <i class="fa-brands fa-instagram"></i>
-              Instagram
-            </a>
-          </p>
-        </div>
+          ">
+        <img src="../img/produtos/la-ferrari/ferrari_laFerrari.jpg" alt="Imagem do produto" />
+        <h3>Ferrari LaFerrari</h3>
+        <i>Preço: <span>R$37.000.000</span></i>
       </div>
-    </footer>
-  </body>
-  <script>
-    // alert("Conheça nossos produtos");
-    const data = new Date();
-    const infoData = document.getElementById("data-hora");
-    infoData.textContent += `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} - ${data.getHours()}:${data.getMinutes()}`;
+      <div onclick="
+            mostrarDetalhes(
+              'Ferrari Puro Sangue',
+              [
+                  '../img/produtos/puro-sangue/ferrari_puroSangue.jpg',
+                  '../img/produtos/puro-sangue/ferrari_puroSangue2.jpg',
+                  '../img/produtos/puro-sangue/ferrari_puroSangue3.jpg',
+              ],
+              '8.000.000',
+              'A Ferrari Purosangue combina desempenho extremo, luxo e versatilidade em um design sofisticado. Equipada com um poderoso motor V12, entrega aceleração impressionante, tecnologia avançada e o DNA esportivo característico da Ferrari em qualquer tipo de estrada.'
+            )
+          ">
+        <img src="../img/produtos/puro-sangue/ferrari_puroSangue.jpg" alt="Imagem do produto" />
+        <h3>Ferrari Puro Sangue</h3>
+        <i>Preço: <span>R$8.000.000</span></i>
+      </div>
+      <div onclick="
+            mostrarDetalhes(
+              'Ferrari Roma',
+              [
+                  '../img/produtos/roma/ferrari_roma.jpg',
+                  '../img/produtos/roma/ferrari_roma2.jpg',
+                  '../img/produtos/roma/ferrari_roma3.jpg',
+              ],
+              '3.200.000',
+              'A Ferrari Roma representa elegância e esportividade em perfeita harmonia. Seu visual minimalista e moderno acompanha um motor potente capaz de proporcionar uma condução dinâmica, confortável e extremamente refinada.'
+            )
+          ">
+        <img src="../img/produtos/roma/ferrari_roma.jpg" alt="Imagem do produto" />
+        <h3>Ferrari Roma</h3>
+        <i>Preço: <span>R$3.200.000</span></i>
+      </div>
+      <div onclick="
+            mostrarDetalhes(
+              'Ferrari Roma',
+              [
+                  '../img/produtos/tributo/ferrari_tributo.jpg',
+                  '../img/produtos/tributo/ferrari_tributo2.jpg',
+                  '../img/produtos/tributo/ferrari_tributo3.jpg',
+              ],
+              '4.000.000',
+              'A Ferrari F8 Tributo foi criada para homenagear a excelência da engenharia Ferrari. Com design aerodinâmico, motor V8 biturbo de alto desempenho e respostas extremamente rápidas, oferece uma experiência intensa tanto nas pistas quanto nas ruas.'
+            )
+          ">
+        <img src="../img/produtos/tributo/ferrari_tributo.jpg" alt="Imagem do produto" />
+        <h3>Ferrari Roma</h3>
+        <i>Preço: <span>R$4.000.000</span></i>
+      </div>
+    </section>
+  </main>
+  <footer id="contato">
+    <div class="info-contato">
+      <a href="#header">
+        <img src="../img/global/ferrari-logo-footer.png" alt="Cavalo da Ferrari prateado" />
+      </a>
+      <div>
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          (11) 3087 - 0199 |
+          <a target="_blank" href="https://www.instagram.com/ferrari/">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/produto.js"></script>
+</body>
 
-    function mostrarDetalhes(nomeProduto, imgUrl, preco, descricao) {
-      const url = `pop_produtos.html?nomeCarro=${encodeURIComponent(nomeProduto)}
-        &imgCarro=${encodeURIComponent(imgUrl)}
-        &precoCarro=${encodeURIComponent(preco)}
-        &descricao=${encodeURIComponent(descricao)}`;
-
-      window.open(url, "_self");
-    }
-  </script>
 </html>

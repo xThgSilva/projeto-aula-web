@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projetinho</title>
+    <title>Ferrari</title>
     <link rel="icon" type="image/x-icon" href="img/logo.png" />
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src/css/header.css">
@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <header>
+    <header id="header">
       <img src="src/img/global/logo.png" alt="Logo da ferrari" class="logo" />
       <nav>
         <ul>
@@ -23,6 +23,7 @@
           <li><a href="#modelo-carros">Modelos</a></li>
           <li><a href="/src/pages/contato.html">Contato</a></li>
           <li><a href="src/pages/produtos.html">Carros</a></li>
+          <li id="data-hora"></li>
         </ul>
       </nav>
     </header>
@@ -111,10 +112,12 @@
       </section>
       <footer id="contato">
         <div class="info-contato">
-          <img
-            src="src/img/global/ferrari-logo-footer.png"
-            alt="Cavalo da Ferrari prateado"
-          />
+          <a href="#header">
+            <img
+              src="src/img/global/ferrari-logo-footer.png"
+              alt="Cavalo da Ferrari prateado"
+            />
+          </a>
           <div>
             <p>
               <i class="fa-solid fa-phone"></i>
@@ -129,5 +132,6 @@
         </div>
       </footer>
     </main>
+    <script src="src/js/index.js"></script>
   </body>
 </html>

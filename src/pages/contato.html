@@ -1,95 +1,94 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato</title>
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/contato.css" />
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
-  </head>
-  <body>
-    <header>
-      <img src="../img/global/logo.png" alt="Logo da ferrari" class="logo" />
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../pages/produtos.html">Carros</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main-contato">
-      <h1>Contato</h1>
-      <p>Preencha e envie o formulário para entrar em contato</p>
 
-      <form class="form-contato">
-        <fieldset>
-          <legend>Dados Pessoais</legend>
-          <div class="label-input">
-            <label for="nome-sobrenome">Nome e Sobrenome</label>
-            <input
-              type="text"
-              id="nome-sobrenome"
-              placeholder="Seu Nome Completo"
-            />
-          </div>
-          <div class="label-input">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="seu@email.com" />
-          </div>
-          <div class="label-input">
-            <label for="telefone">Telefone</label>
-            <input type="text" id="telefone" placeholder="(XX) XXXXX - XXXX" />
-          </div>
-          <div class="label-input">
-            <label for="area-mensagem">Mensagem</label>
-            <textarea
-              id="area-mensagem"
-              maxlength="200"
-              placeholder="Escreva o motivo para contato..."
-            ></textarea>
-          </div>
-          <div class="preferencia-contato">
-            <label>Como prefere o seu contato</label>
-            <input type="radio"> E-mail
-            <input type="radio"> Telefone
-            <input type="radio"> Whatsapp
-          </div>
-          <div>
-            <label for="motivo">Qual o motivo do seu contato</label>
-            <select>
-              <option value="Duvida">Dúvida</option>
-              <option value="Sugestao">Sugestão</option>
-              <option value="Elogio">Elogio</option>
-              <option value="Reclamacao">Reclamação</option>
-            </select>
-          </div>
-          <div>
-            <label for="receber-email">Gostaria de receber novidades por e-mail?</label>
-            <input id="receber-email" type="checkbox">
-          </div>
-          <button>Enviar</button>
-        </fieldset>
-      </form>
-    </main>
-    <footer id="contato">
-      <div class="info-contato">
-        <img
-          src="../img/global/ferrari-logo-footer.png"
-          alt="Cavalo da Ferrari prateado"
-        />
-        <div>
-          <p>
-            <i class="fa-solid fa-phone"></i>
-            (11) 3087 - 0199 |
-            <a target="_blank" href="https://www.instagram.com/ferrari/">
-              <i class="fa-brands fa-instagram"></i>
-              Instagram
-            </a>
-          </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../img/global/logo.png" />
+  <title>Contato</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/contato.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+</head>
+
+<body>
+  <header id="header">
+    <a href="../../index.html">
+      <img src="../img/global/logo.png" alt="Logo da ferrari" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../pages/produtos.html">Carros</a></li>
+        <li id="data-hora"></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-contato">
+    <h1>Contato</h1>
+    <p>Preencha e envie o formulário para entrar em contato</p>
+
+    <form class="form-contato">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div class="label-input">
+          <label for="nome-sobrenome">Nome e Sobrenome</label>
+          <input type="text" id="nome-sobrenome" placeholder="Seu Nome Completo" />
         </div>
+        <div class="label-input">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" />
+        </div>
+        <div class="label-input">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" placeholder="(XX) XXXXX - XXXX" />
+        </div>
+        <div class="label-input">
+          <label for="area-mensagem">Mensagem</label>
+          <textarea id="area-mensagem" maxlength="200" placeholder="Escreva o motivo para contato..."></textarea>
+        </div>
+        <div class="preferencia-contato">
+          <label>Como prefere o seu contato</label>
+          <input type="radio"> E-mail
+          <input type="radio"> Telefone
+          <input type="radio"> Whatsapp
+        </div>
+        <div>
+          <label for="motivo">Qual o motivo do seu contato</label>
+          <select>
+            <option value="Duvida">Dúvida</option>
+            <option value="Sugestao">Sugestão</option>
+            <option value="Elogio">Elogio</option>
+            <option value="Reclamacao">Reclamação</option>
+          </select>
+        </div>
+        <div>
+          <label for="receber-email">Gostaria de receber novidades por e-mail?</label>
+          <input id="receber-email" type="checkbox">
+        </div>
+        <button>Enviar</button>
+      </fieldset>
+    </form>
+  </main>
+  <footer id="contato">
+    <div class="info-contato">
+      <a href="#header">
+        <img src="../img/global/ferrari-logo-footer.png" alt="Cavalo da Ferrari prateado" />
+      </a>
+      <div>
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          (11) 3087 - 0199 |
+          <a target="_blank" href="https://www.instagram.com/ferrari/">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+        </p>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+  <script src="../js/contato.js"></script>
+</body>
+
 </html>
