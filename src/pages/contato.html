@@ -29,45 +29,45 @@
     <h1>Contato</h1>
     <p>Preencha e envie o formulário para entrar em contato</p>
 
-    <form class="form-contato">
+    <form class="form-contato" id="form-contato">
       <fieldset>
         <legend>Dados Pessoais</legend>
         <div class="label-input">
           <label for="nome-sobrenome">Nome e Sobrenome</label>
-          <input type="text" id="nome-sobrenome" placeholder="Seu Nome Completo" />
+          <input type="text" id="nome-sobrenome" placeholder="Seu Nome Completo" required/>
         </div>
         <div class="label-input">
           <label for="email">E-mail</label>
-          <input type="email" id="email" placeholder="seu@email.com" />
+          <input type="email" id="email" placeholder="seu@email.com" required/>
         </div>
         <div class="label-input">
           <label for="telefone">Telefone</label>
-          <input type="text" id="telefone" placeholder="(XX) XXXXX - XXXX" />
+          <input type="tel" id="telefone" placeholder="(XX) XXXXX - XXXX" required/>
         </div>
         <div class="label-input">
           <label for="area-mensagem">Mensagem</label>
-          <textarea id="area-mensagem" maxlength="200" placeholder="Escreva o motivo para contato..."></textarea>
+          <textarea id="area-mensagem" maxlength="200" placeholder="Escreva o motivo para contato..." required></textarea>
         </div>
         <div class="preferencia-contato">
           <label>Como prefere o seu contato</label>
-          <input type="radio"> E-mail
-          <input type="radio"> Telefone
-          <input type="radio"> Whatsapp
+          <input type="radio" name="contato" value="email" required> E-mail
+          <input type="radio" name="contato" value="telefone" required> Telefone
+          <input type="radio" name="contato" value="whatsapp" required> Whatsapp
         </div>
         <div>
           <label for="motivo">Qual o motivo do seu contato</label>
-          <select>
-            <option value="Duvida">Dúvida</option>
-            <option value="Sugestao">Sugestão</option>
-            <option value="Elogio">Elogio</option>
-            <option value="Reclamacao">Reclamação</option>
+          <select id="motivo-contato" name="motivo" required>
+            <option value="duvida">Dúvida</option>
+            <option value="sugestao">Sugestão</option>
+            <option value="elogio">Elogio</option>
+            <option value="reclamacao">Reclamação</option>
           </select>
         </div>
         <div>
           <label for="receber-email">Gostaria de receber novidades por e-mail?</label>
-          <input id="receber-email" type="checkbox">
+          <input id="receber-email" name="receber-email" type="checkbox">
         </div>
-        <button>Enviar</button>
+        <button type="submit">Enviar</button>
       </fieldset>
     </form>
   </main>
